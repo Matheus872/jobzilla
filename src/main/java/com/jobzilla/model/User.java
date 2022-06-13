@@ -1,6 +1,7 @@
 package com.jobzilla.model;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -12,7 +13,8 @@ import java.util.Collection;
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private Integer id;
     private String username;
     private String senha;
