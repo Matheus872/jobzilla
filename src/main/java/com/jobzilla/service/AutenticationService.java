@@ -29,6 +29,14 @@ public class AutenticationService implements UserDetailsService {
         throw new UsernameNotFoundException("Dados inválidos");
     }
 
+    public User loadUserByUsernameReturnUser(String username) throws UsernameNotFoundException {
+        Optional<User> user = userRepository.findByUsername(username);
+        if(user.isPresent()){
+            return user.get();
+        }
+        throw new UsernameNotFoundException("Dados inválidos");
+    }
+
     public void userRegister(RegisterRequestDto request){
         if (request.isNullOrEmpty()) {
             throw new InvalidDataException();
