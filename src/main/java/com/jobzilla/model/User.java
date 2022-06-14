@@ -1,12 +1,10 @@
 package com.jobzilla.model;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Collection;
 
 @Entity
@@ -21,6 +19,7 @@ public class User implements UserDetails{
     private String senha;
     private String email;
     private String nome;
+    private Integer profileType;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

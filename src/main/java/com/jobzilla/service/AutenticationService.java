@@ -42,6 +42,7 @@ public class AutenticationService implements UserDetailsService {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setSenha(new BCryptPasswordEncoder().encode(request.getPassword()));
+        user.setProfileType(request.getProfileType());
         userRepository.save(user);
 
     }

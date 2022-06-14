@@ -50,9 +50,5 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
                 .and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(new AutenticationViaTokenFilter(tokenService, repository), UsernamePasswordAuthenticationFilter.class);
-
     }
-
-
-
 }
