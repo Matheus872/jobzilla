@@ -1,8 +1,8 @@
 package com.jobzilla.controller;
-import com.jobzilla.dto.request.LoginRequestDto;
-import com.jobzilla.dto.request.RegisterRequestDto;
+import com.jobzilla.dto.request.auth.LoginRequestDto;
+import com.jobzilla.dto.request.auth.RegisterRequestDto;
 import com.jobzilla.dto.response.DefaultMessageResponseDto;
-import com.jobzilla.dto.response.TokenDto;
+import com.jobzilla.dto.response.auth.TokenDto;
 import com.jobzilla.exception.ExistingEmailException;
 import com.jobzilla.exception.InvalidDataException;
 import com.jobzilla.repository.UserRepository;

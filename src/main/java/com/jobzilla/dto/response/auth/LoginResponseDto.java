@@ -1,4 +1,4 @@
-package com.jobzilla.dto.response;
+package com.jobzilla.dto.response.auth;
 
 public class LoginResponseDto {
     private String jwt;

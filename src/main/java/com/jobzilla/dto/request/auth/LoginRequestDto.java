@@ -1,4 +1,4 @@
-package com.jobzilla.dto.request;
+package com.jobzilla.dto.request.auth;
 import lombok.Data;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 

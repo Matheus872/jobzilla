@@ -14,11 +14,11 @@ public class User implements UserDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer userId;
     private String username;
-    private String senha;
+    private String password;
     private String email;
-    private String nome;
+    private String name;
     private Integer profileType;
 
     @Override
@@ -28,7 +28,7 @@ public class User implements UserDetails{
 
     @Override
     public String getPassword() {
-        return this.senha;
+        return this.password;
     }
 
     @Override
