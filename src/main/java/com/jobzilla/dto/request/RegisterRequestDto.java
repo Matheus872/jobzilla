@@ -1,4 +1,4 @@
-package com.jobzilla.dto.request.auth;
+package com.jobzilla.dto.request;
 
 import lombok.Data;
 

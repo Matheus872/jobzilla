@@ -1,6 +1,6 @@
 package com.jobzilla.service;
 
-import com.jobzilla.dto.request.auth.RegisterRequestDto;
+import com.jobzilla.dto.request.RegisterRequestDto;
 import com.jobzilla.exception.ExistingEmailException;
 import com.jobzilla.exception.InvalidDataException;
 import com.jobzilla.repository.UserRepository;
@@ -49,7 +49,7 @@ public class AutenticationService implements UserDetailsService {
         User user = new User();
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
-        user.setPassword(new BCryptPasswordEncoder().encode(request.getPassword()));
+        user.setSenha(new BCryptPasswordEncoder().encode(request.getPassword()));
         user.setProfileType(request.getProfileType());
         userRepository.save(user);
 

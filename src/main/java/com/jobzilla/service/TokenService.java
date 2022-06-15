@@ -26,7 +26,7 @@ public class TokenService {
 
 
         return Jwts.builder().setIssuer("API de delivery willian")
-                .setSubject(logado.getUserId().toString())
+                .setSubject(logado.getId().toString())
                 .setIssuedAt(hoje)
                 .setExpiration(dataExpiracao)
                 .signWith(SignatureAlgorithm.HS256, secret)

@@ -1,4 +1,4 @@
-package com.jobzilla.dto.response.auth;
+package com.jobzilla.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
